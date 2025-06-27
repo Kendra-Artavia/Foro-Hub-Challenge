@@ -31,7 +31,6 @@ public class UserController {
 
     @PostMapping("/register")
     public ResponseEntity<?> registerUser(@RequestBody @Valid RegisterRequest registerRequest) {
-        // Si ocurre error de validación o negocio, será atrapado por GlobalExceptionHandler
         service.registerUser(registerRequest);
         return ResponseEntity.ok("User registered successfully");
     }

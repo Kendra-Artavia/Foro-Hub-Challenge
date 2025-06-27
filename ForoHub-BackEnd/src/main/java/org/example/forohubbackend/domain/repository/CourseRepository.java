@@ -5,4 +5,5 @@ import org.example.forohubbackend.domain.course.Course;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface CourseRepository extends JpaRepository<Course, Long> {
+    Course findByName( String s);
 }

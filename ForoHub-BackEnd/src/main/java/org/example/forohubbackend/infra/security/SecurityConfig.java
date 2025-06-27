@@ -44,7 +44,7 @@ public class SecurityConfig {
 
                 .headers(headers -> headers.frameOptions(frameOptions -> frameOptions.sameOrigin()))
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers( "/auth/**" , "/topic/**").permitAll()
+                        .requestMatchers( "/auth/**"  ,  "/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html").permitAll()
                         .anyRequest().authenticated()
                 )
 
