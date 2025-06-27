@@ -44,7 +44,7 @@ public class SecurityConfig {
 
                 .headers(headers -> headers.frameOptions(frameOptions -> frameOptions.sameOrigin()))
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers( "/auth/**").permitAll()
+                        .requestMatchers( "/auth/**" , "/topic/**").permitAll()
                         .anyRequest().authenticated()
                 )
 
